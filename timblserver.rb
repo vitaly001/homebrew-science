@@ -16,6 +16,7 @@ class Timblserver < Formula
   needs :openmp
 
   def install
+    ENV["LD"] = ENV.cc
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
