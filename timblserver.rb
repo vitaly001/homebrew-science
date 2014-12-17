@@ -7,7 +7,6 @@ class Timblserver < Formula
   sha1 "d905034f48d28d3f9bf870021c4389ba3822d4ba"
 
   depends_on "pkg-config" => :build
-  depends_on "boost"
   depends_on "timbl"
   depends_on "ticcutils"
 
