@@ -1,9 +1,8 @@
 class Timbl < Formula
   desc "Memory-based learning algorithms"
   homepage "http://ilk.uvt.nl/timbl/"
-  url "http://software.ticc.uvt.nl/timbl-6.4.6.tar.gz"
-  sha256 "8aeb09283a3389db9b3b576b6f0632f84841facc85cad516bb57e3ec070737b4"
-  revision 1
+  url "http://software.ticc.uvt.nl/timbl-6.4.7.tar.gz"
+  sha256 "225db24aef6f093a2b1c3806acbc4df98a8880a55e9069e51ad4319e26029945"
 
   bottle do
     cellar :any
