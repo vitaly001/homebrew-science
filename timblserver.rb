@@ -1,10 +1,7 @@
-require "formula"
-
-
 class Timblserver < Formula
   homepage "http://ilk.uvt.nl/timbl/"
-  url "http://software.ticc.uvt.nl/timblserver-1.9.tar.gz"
-  sha1 "d905034f48d28d3f9bf870021c4389ba3822d4ba"
+  url "http://software.ticc.uvt.nl/timblserver-1.10.tar.gz"
+  sha256 "81f31aac8bc7d5ae7f12a6f3fcd19507d688451be2cc63ce79f780375029e02e"
 
   depends_on "pkg-config" => :build
   depends_on "timbl"
