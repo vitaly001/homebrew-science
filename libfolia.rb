@@ -2,8 +2,8 @@ class Libfolia < Formula
   desc "XML annotation format for linguistically annotated language resources"
   homepage "https://proycon.github.io/folia/"
   url "http://software.ticc.uvt.nl/libfolia-0.13.tar.gz"
-  sha256 "a9fc9e475bb79629dc014cf7a78af64486c0f1bb902821ba2bb36c38c77a5d24"
-  revision 1
+  sha256 "a9111156362d8a68e06132aa7d1a57e28026fad5b90736efdd74f153548c8abd"
+  revision 2
 
   bottle do
     cellar :any
@@ -12,7 +12,9 @@ class Libfolia < Formula
     sha256 "4d541070af9aabc2bce4b1a46f3ad9360a7d6e9fc6e5128c074e77ed94d9fd42" => :mavericks
   end
 
-  option "without-check", "skip build-time checks (not recommended)"
+  option "without-test", "skip build-time checks (not recommended)"
+
+  deprecated_option "without-check" => "without_test"
 
   depends_on "pkg-config" => :build
   depends_on "icu4c"
@@ -25,7 +27,8 @@ class Libfolia < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
-    system "make", "check" if build.with? "check"
+    system "make"
+    system "make", "check" if build.with? "test"
     system "make", "install"
   end
 end
